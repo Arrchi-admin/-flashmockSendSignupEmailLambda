@@ -102,6 +102,7 @@ def lambda_handler(event, context):
         .button-container {{
             text-align: center;
             margin-top: 30px;
+            color: #ffffff;
         }}
         .button {{
             display: inline-block;
@@ -140,8 +141,8 @@ def lambda_handler(event, context):
 
         <p>You can log in anytime to access your referral link and other resources:</p>
 
-        <div class="button-container">
-            <a href="https://www.flashmock.com/login" class="button">Log in here</a>
+        <div>
+            <a href="https://www.flashmock.com" class="button">https://www.flashmock.com</a>
         </div>
     </div>
 </body>
