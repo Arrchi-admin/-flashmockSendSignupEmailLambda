@@ -43,7 +43,7 @@ def lambda_handler(event, context):
         recipient_email = query_params.get('email', '')
         user_name = query_params.get('name', 'User')  # Default to 'User' if no name is provided
         referral_link = query_params.get('referral_link', 'https://www.flashmock.com')  # Default referral link
-        share_message = query_params.get('share_message', 'I just earned 5 free mock interviews with FlashMock! Join me and get your own free mock interviews. Use my referral link')
+        share_message = query_params.get('share_message', 'I just earned 10 free mock interviews with FlashMock! Join me and get your own free mock interviews. Use my referral link')
 
         # Check if email is provided
         if not recipient_email:
@@ -117,6 +117,11 @@ def lambda_handler(event, context):
         .button:hover {{
             background-color: #E76642;
         }}
+        .link {{
+            color: #FF7F50;
+            text-decoration: none;
+            font-weight: bold;
+        }}
     </style>
 </head>
 <body>
@@ -127,23 +132,18 @@ def lambda_handler(event, context):
 
         <p>Hi {user_name},</p>
 
-        <p>Congratulations! You've earned 5 free mock interviews to kickstart your journey toward interview success.</p>
+        <p>Congratulations! You've earned <span class="highlight">10 free mock interviews</span> to kickstart your journey toward interview success.</p>
 
         <p>We're thrilled to have you on board as one of our early adopters.</p>
+        <p>The beta will be live on <strong>November 1st</strong>. We'll notify you by email when it's ready!</p>
 
-        <p>Want more mock interviews? Refer your friends! When a friend signs up, both of you get 1 free mock interview.</p>
+        <p>Want more mock interviews? Refer your friends! When a friend signs up, both of you receive an additional free mock interview.</p>
 
         <div class="button-container">
-            <a href="{referral_link}" class="button">Share Your Referral Link</a>
+            <a href="{referral_link}?message={share_message}" class="button">Share Your Referral Link</a>
         </div>
 
-        <p>Share this message with your friends: <strong>{share_message}</strong></p>
-
-        <p>You can log in anytime to access your referral link and other resources:</p>
-
-        <div>
-            <a href="https://www.flashmock.com" class="button">https://www.flashmock.com</a>
-        </div>
+        <p>Log in anytime to access your referral link: <a href="https://www.flashmock.com" class="link">https://www.flashmock.com</a></p>
     </div>
 </body>
 </html>
