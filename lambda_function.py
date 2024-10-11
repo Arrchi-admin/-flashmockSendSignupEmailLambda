@@ -4,7 +4,7 @@ import json
 ses = boto3.client('ses', region_name='us-west-2')  # Replace 'your-region' with the region you are using
 
 # Function to send email
-def send_email(recipient_email, subject, body_html):
+def  send_email(recipient_email, subject, body_html):
     sender_email = "chidvi@flashmock.com"  # Replace with your sender email
     print(recipient_email, subject,body_html )
 
@@ -140,7 +140,7 @@ def lambda_handler(event, context):
         <p>Want more mock interviews? Refer your friends! When a friend signs up, both of you receive an additional free mock interview.</p>
 
         <div class="button-container">
-            <a href="mailto:?subject=Join FlashMock&body={share_message}{referral_link}" class="button">Share Your Referral Link</a>
+            <a href="{referral_link}" target="_blank" class="button">Open Your Referral Link</a>
            </div>
 
         <p>Log in anytime to access your referral link: <a href="https://www.flashmock.com" class="link">https://www.flashmock.com</a></p>
