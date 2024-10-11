@@ -43,7 +43,7 @@ def lambda_handler(event, context):
         recipient_email = query_params.get('email', '')
         user_name = query_params.get('name', 'User')  # Default to 'User' if no name is provided
         referral_link = query_params.get('referral_link', 'https://www.flashmock.com')  # Default referral link
-        share_message = query_params.get('share_message', 'I just earned 10 free mock interviews with FlashMock! Join me and get your own free mock interviews. Use my referral link')
+        share_message = query_params.get('share_message', 'I just earned 10 free mock interviews with FlashMock! Join me and get your own free mock interviews. Use my referral link:')
 
         # Check if email is provided
         if not recipient_email:
@@ -140,8 +140,8 @@ def lambda_handler(event, context):
         <p>Want more mock interviews? Refer your friends! When a friend signs up, both of you receive an additional free mock interview.</p>
 
         <div class="button-container">
-            <a href="{referral_link}?message={share_message}" class="button">Share Your Referral Link</a>
-        </div>
+            <a href="mailto:?subject=Join FlashMock&body={share_message}{referral_link}" class="button">Share Your Referral Link</a>
+           </div>
 
         <p>Log in anytime to access your referral link: <a href="https://www.flashmock.com" class="link">https://www.flashmock.com</a></p>
     </div>
