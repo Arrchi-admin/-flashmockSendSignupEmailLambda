@@ -132,7 +132,7 @@ def lambda_handler(event, context):
 
         <p>Hi {user_name},</p>
 
-        <p>Congratulations! You've earned <span class="highlight">10 free mock interviews</span> to kickstart your journey toward interview success.</p>
+        <p>Congratulations! You've earned 5 free mock interviews to kickstart your journey toward interview success.</p>
 
         <p>We're thrilled to have you on board as one of our early adopters.</p>
         <p>The beta will be live on <strong>November 1st</strong>. We'll notify you by email when it's ready!</p>
@@ -142,6 +142,8 @@ def lambda_handler(event, context):
         <div class="button-container">
             <a href="{referral_link}" target="_blank" class="button">Open Your Referral Link</a>
            </div>
+           
+        <p> Here is your referral link: <a href="{referral_link}" class="link">{referral_link}</a></p>
 
         <p>Log in anytime to access your referral link: <a href="https://www.flashmock.com" class="link">https://www.flashmock.com</a></p>
     </div>
