@@ -43,6 +43,7 @@ def lambda_handler(event, context):
         recipient_email = query_params.get('email', '')
         user_name = query_params.get('name', 'User')  # Default to 'User' if no name is provided
         referral_link = query_params.get('referral_link', 'https://www.flashmock.com')  # Default referral link
+        beta_mocks_award = query_params.get('beta_mocks_award', 5)
         share_message = query_params.get('share_message', 'I just earned 10 free mock interviews with FlashMock! Join me and get your own free mock interviews. Use my referral link:')
 
         # Check if email is provided
@@ -132,7 +133,7 @@ def lambda_handler(event, context):
 
         <p>Hi {user_name},</p>
 
-        <p>Congratulations! You've earned 5 free mock interviews to kickstart your journey toward interview success.</p>
+        <p>Congratulations! You've earned {beta_mocks_award} free mock interviews to kickstart your journey toward interview success.</p>
 
         <p>We're thrilled to have you on board as one of our early adopters.</p>
         <p>The beta will be live on <strong>November 1st</strong>. We'll notify you by email when it's ready!</p>
