@@ -54,7 +54,7 @@ def lambda_handler(event, context):
             }
 
         # Define email subject and body
-        subject = "Welcome to FlashMock! You’ve Earned 5 Free Mock Interviews 🎉"
+        subject = "Welcome to FlashMock! You’ve Earned " + str(beta_mocks_award) +" Free Mock Interviews 🎉"
 
         # Replace name, referral link, and share message dynamically in the email body
         body_html = f"""<!DOCTYPE html>
