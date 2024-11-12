@@ -54,7 +54,7 @@ def lambda_handler(event, context):
             }
 
         # Define email subject and body
-        subject = "Welcome to FlashMock! You’ve Earned " + str(beta_mocks_award) +" Free Mock Interviews 🎉"
+        subject = "Welcome to FlashMock! You’ve Earned unlimited mock interviews for an entire month! 🎉"
 
         # Replace name, referral link, and share message dynamically in the email body
         body_html = f"""<!DOCTYPE html>
@@ -133,13 +133,13 @@ def lambda_handler(event, context):
 
         <p>Hi {user_name},</p>
 
-        <p>Congratulations! You've earned {beta_mocks_award} free mock interviews to kickstart your journey toward interview success.</p>
+        <p>Congratulations! You got unlimited mock interviews for an entire month to kickstart your journey toward interview success.</p>
 
         <p>We're thrilled to have you on board as one of our early adopters.</p>
-        <p>The beta will be live on <strong>November 1st</strong>. We'll notify you by email when it's ready!</p>
+        <p>The beta will be live on <strong>November 11th</strong>. We'll notify you by email when it's ready!</p>
 
-        <p>Want more mock interviews? Refer your friends! When a friend signs up, both of you receive an additional free mock interview.</p>
-
+        <p>Invite friends and earn $10,unlimited times! 🎉.</p>
+        <p>Each friend you invite receives $10,and you get $10 in credit for every referred user who signs up.</p>
         <div class="button-container">
             <a href="{referral_link}" target="_blank" class="button">Open Your Referral Link</a>
            </div>
